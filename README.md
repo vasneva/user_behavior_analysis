@@ -1,51 +1,49 @@
 # user_behavior_analysis
-Для компании по доставке продуктов на дом необходимо провести анализ поведения пользователей, а также оценить эффективность каналов их привлечения.
+**Project Goals**
 
-1. Посчитать число уникальных пользователей за февраль 2020 года
-2. Посчитать количество установок в январе 2020
-3. Разделить пользователей на когорты по дню установки приложения и посчитать конверсию из установки в покупку в течение 7 дней 
-4. Выяснить с какого платного маркетингового канала пришло больше всего новых пользователей
-5. Проанализировать на каком этапе воронки уходит большая часть зарегистрированных клиентов
-6. Выяснить, пользователи, пришедшие с каких каналов, показали самую низкую конверсию в первую покупку
-7. Пользователи, пришедшие с какого калана имеют наибольший медианный первый чек?
-8. Какой платный канал привлечения (среди рекламных) имеет самый высокий ROMI?
+For a home grocery delivery company, it is necessary to analyze user behavior and assess the effectiveness of user acquisition channels.
 
-Данные по затратам на рекламу:
+- Calculate the number of unique users for February 2020
+- Count the number of app installations in January 2020
+- Segment users into cohorts by app installation date and calculate the 7-day conversion rate from installation to purchase
+- Identify which paid marketing channel brought in the most new users
+- Analyze the stage in the funnel where most registered clients drop off
+- Determine which channels have the lowest conversion rate from acquisition to first purchase
+- Identify the channel with the highest median first purchase amount
+- Determine which paid acquisition channel (among advertising channels) has the highest ROMI (Return on Marketing Investment)
 
-Яндекс – 10 491 707 руб.
+**Advertising Costs Data:**
 
-Гугл – 10 534 878 руб.
+- Yandex – 10,491,707 RUB
+- Google – 10,534,878 RUB
+- Facebook – 8,590,498 RUB
+- Instagram – 8,561,626 RUB
+- VK – 9,553,531 RUB
 
-Фейсбук – 8 590 498 руб.
+Data covers the period from January 1 to March 31, 2020, for users registered after January 1, 2020.
 
-Инстаграм – 8 561626 руб.
+**Data Description**
 
-ВК – 9 553 531руб.
-
-Данные за период с 1 января по 31 марта 2020, только по пользователям, зарегистрированным позднее 1 января 2020.
-
-Описание данных
-
-- date – дата совершения события
-- event - событие
-- app_install – установка приложения
-- app_start – открыть приложения
-- register – зарегистрироваться
-- search – перейти на страницу поиска товаров (каталог)
-- open_item – открыть товар
-- choose_item – отправить товар в корзину
-- tap_basket – перейти в корзину
-- purchase – подтверждение покупки
-- gender – пол пользователя
-- os_name – платформа пользователя
-- city – город пользователя
-- device_id – идентификатор устройства пользователя
-- urm_source – канал, с которого пришел пользователь
-- yandex-direct – Яндекс директ
-- google_ads – реклама в Google
-- vk_ads – реклама в ВК
-- instagram_ads – реклама в instagram
-- facebook_ads – реклама в facebook
-- referal – акция «приведи друга»
-- Если стоит ‘-’, то канал не определен или это скачивание приложения напрямую или посещение не с рекламы
-- purchase_sum – стоимость покупки (при совершении события ‘purchase’)
+- `date` – date of the event
+- `event` – event type
+  - `app_install` – app installation
+  - `app_start` – open app
+  - `register` – register
+  - `search` – go to the product search page (catalog)
+  - `open_item` – view a product
+  - `choose_item` – add a product to cart
+  - `tap_basket` – go to cart
+  - `purchase` – purchase confirmation
+- `gender` – user gender
+- `os_name` – user platform
+- `city` – user city
+- `device_id` – user device ID
+- `utm_source` – user acquisition channel
+  - `yandex-direct` – Yandex Direct
+  - `google_ads` – Google Ads
+  - `vk_ads` – VK ads
+  - `instagram_ads` – Instagram ads
+  - `facebook_ads` – Facebook ads
+  - `referral` – "Refer a friend" campaign
+  - `'-'` – channel undefined, direct app download, or non-ad traffic
+- `purchase_sum` – purchase amount (for `purchase` event)
